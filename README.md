@@ -1,36 +1,62 @@
-# Netflix İçerik Analizi — Proje İskeleti (Gün 1)
+# Netflix İçerik Analizi
 
-Bu klasör **Gün 1: Kurulum & Veri Hazırlığı** için hazırlandı.
+Netflix içerik kataloğu üzerinde Python ile yapılan keşifsel veri analizi (EDA) ve temel metin analizi (NLP) çalışması.
 
-## Yapılacaklar (Checklist)
-- [ ] Python ortamını kur (aşağıdaki `requirements.txt` ile)
-- [ ] Kaggle'dan `netflix_titles.csv` indir ve `data/` klasörüne koy
-- [ ] `notebooks/01_setup_and_load.ipynb` notebook'unu aç, ilk hücreleri çalıştır
-- [ ] Veri ön incelemesi: `head()`, `info()`, `describe()`
+## Amaç
 
-## Kısayol Komutlar
-```bash
-# (Öneri) Sanal ortam
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
-# Gerekli paketler
-pip install -r requirements.txt
-
-# Jupyter başlat
-jupyter notebook
-# veya
-jupyter lab
-```
+Netflix'teki film ve dizi içeriklerinin dağılımını incelemek, içerik türleri arasındaki farkları görselleştirmek ve içerik açıklamalarında öne çıkan anahtar kelimeleri belirlemek.
 
 ## Veri Seti
-- Kaggle: **Netflix Movies and TV Shows Dataset** (yapımcı: shivamb)
-- Dosya adı: `netflix_titles.csv`
-- Bu dosyayı indirip `data/` klasörüne yerleştir.
 
-> Not: Kaggle hesabın yoksa ücretsiz açabilirsin. İndirdikten sonra bu klasöre `netflix_titles.csv` olarak kopyala.
+- Kaynak: Kaggle, **Netflix Movies and TV Shows** (yapımcı: shivamb)
+- Dosya: `netflix_titles.csv` (`data/` klasörüne konur)
+- Kayıt sayısı: **[KAYIT SAYISI]**
+
+## Yöntem
+
+1. **Veri hazırlığı:** Eksik ve tutarsız değerlerin tespiti ve temizlenmesi (**[ör. hangi sütunlarda eksik veri vardı, nasıl ele alındı]**)
+2. **Keşifsel veri analizi:** Film ve dizi dağılımlarının karşılaştırmalı incelenmesi, içerik türü farklılıklarının görselleştirilmesi
+3. **Metin analizi (NLP):** İçerik açıklamaları üzerinde temel ön işleme ve sık geçen anahtar kelimelerin belirlenmesi
+4. **Raporlama:** Sonuçların grafik ve tablolarla özetlenmesi
+
+## Temel Bulgular
+
+- **[BULGU 1, ör. film / dizi oranı ve bunun yıllara göre değişimi]**
+- **[BULGU 2, ör. en yaygın içerik türleri ya da ülkeler]**
+- **[BULGU 3, ör. açıklamalarda en sık geçen anahtar kelimeler]**
+
+
+## Kullanılan Araçlar
+
+- Python
+- Pandas
+- Matplotlib / Seaborn
+- Jupyter Notebook
+
+## Proje Yapısı
+
+```
+netflix-dataset-analysis/
+├── data/            # Ham veri (netflix_titles.csv)
+├── notebooks/       # Analiz notebook'ları
+├── src/             # Yardımcı kodlar
+├── requirements.txt
+└── README.md
+```
+
+## Çalıştırma
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook
+```
+
+## Yazar
+
+Güliçin Aktaş
 
 ## Sonraki Adımlar
 Gün 2'de veri yükleme ve hızlı inceleme (EDA'ya hazırlık) yapılacak.
